@@ -38,7 +38,7 @@ j2r --config=your.config.json --root=dist
 
 ```js
 {
-  "route": {
+  "route": { // 路由
     "type": "BrowserRouter", // react-router-dom HashRouter BrowserRouter,
     "children": [ // 子节点（路由）
       {
@@ -51,6 +51,10 @@ j2r --config=your.config.json --root=dist
             "type": "View.B" // view.B 组件
           }
         ]
+      },
+      {
+        "type": "span",
+        "children": ["span"]
       }
     ]
   },
