@@ -1,6 +1,5 @@
 # 开始
 
-
 ## 安装
 ```shell
 npm i @avairain/j2r
@@ -38,7 +37,7 @@ j2r --config=your.config.json --root=dist
 
 ```js
 {
-  "route": { // 路由
+  "route": { // 路由 基于 react-router-dom
     "type": "BrowserRouter", // react-router-dom HashRouter BrowserRouter,
     "children": [ // 子节点（路由）
       {
@@ -68,7 +67,7 @@ j2r --config=your.config.json --root=dist
         },
         {
           "name": "useBoolean",
-          "package": "ahooks"
+          "package": "ahooks" // 第三方的包需要手动安装
         },
         {
           "name": "useLocale",
