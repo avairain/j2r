@@ -1,7 +1,7 @@
 {
   "name": "@avairain/j2r",
   "author": "@avairain",
-  "version": "0.0.26",
+  "version": "0.0.28",
   "main": "src/index.js",
   "license": "MIT",
   "keywords": ["j2r"],

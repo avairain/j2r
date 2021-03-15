@@ -2,7 +2,6 @@ const config = require('./getConfig')()
 const { readFile, writeFile } = require('../_util')
 const templates = require('./getTemplate')()
 const { transformJsonList } = require('./transformJson')
-console.log('config:', config);
 const { file, root } = config
 
 const t = JSON.parse(readFile(file))

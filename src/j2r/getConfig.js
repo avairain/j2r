@@ -16,7 +16,7 @@ if (argv.length > 2) {
 let fileConfig = {}
 
 try {
-  fileConfig = JSON.parse(readFile(`./${cmdConfig.config}` || './j2r.config.json').toString())
+  fileConfig = JSON.parse(readFile(cmdConfig.config || './j2r.config.json').toString())
 } catch (err) {
   // throwErr(err)
   fileConfig = {}
