@@ -1,0 +1,107 @@
+{
+  "route": {
+    "type": "BrowserRouter",
+    "children": [
+      {
+        "type": "Route",
+        "props": {
+          "path": "/"
+        },
+        "children":  [
+          {
+            "type": "Route",
+            "props": {
+              "path": "/b"
+            },
+            "children": [
+              {
+                "type": "div",
+                "children": [
+                  {
+                    "type": "View.B"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "Route",
+            "props": {
+              "path": "/d"
+            },
+            "children": ["d"]
+          },
+          {
+            "type": "Route",
+            "props": {
+              "path": "/c"
+            },
+            "children": [
+              {
+                "type": "View.C",
+                "children": ["c"]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "view": {
+    "B": {
+      "type": "div",
+      "props": {
+        "onClick": "function: (e) => console.log(e)",
+        "style": {
+          "color": "red"
+        }
+      },
+      "children": ["c", "{props.children}"]
+    },
+    "C": {
+      "type": "div",
+      "usingHooks": [
+        {
+          "name": "useState, useEffect",
+          "package": "react"
+        },
+        {
+          "name": "useBoolean",
+          "package": "ahooks"
+        },
+        {
+          "name": "useLocale",
+          "package": "../../hooks"
+        }
+      ],
+      "componentAction": [
+        "const [s, setS] = useState('123');"
+      ],
+      "props": {
+        "onClick": "function: (e) => setS(s + (s.length + 1))",
+        "style": {
+          "color": "green"
+        }
+      },
+      "children": [
+        {
+          "type": "View.B",
+          "children": ["{s}"]
+        }
+      ]
+    }
+  },
+  "page": {
+    "title": "input",
+    "cssLink": ["111.css"],
+    "appRoot": "#root",
+    "body": [
+      {
+        "type": "div",
+        "props": {
+          "id": "root"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@avairain/j2r",
+  "author": "@avairain",
+  "version": "0.0.25",
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": ["j2r"],
+  "dependencies": {
+    "prettier": "^2.2.1",
+    "mkdirp": "^1.0.4"
+  },
+  "files": [
+    "src",
+    "script"
+  ],
+  "bin": {
+    "j2r": "./script/start.js",
+    "j2rbuild": "./script/build.js"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "devDependencies": {}
+}

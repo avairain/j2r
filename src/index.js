@@ -1,0 +1,1 @@
+require('./j2r/index')
