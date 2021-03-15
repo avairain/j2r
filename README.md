@@ -68,10 +68,6 @@ j2r --config=your.config.json --root=dist
         {
           "name": "useBoolean",
           "package": "ahooks" // 第三方的包需要手动安装
-        },
-        {
-          "name": "useLocale",
-          "package": "../../hooks"
         }
       ],
       "props": {
