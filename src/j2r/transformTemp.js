@@ -16,7 +16,7 @@ const s = transformJsonList(body)
 
 indexTemp = indexTemp.replace(/\{page\.title\}/g, title)
 indexTemp = indexTemp.replace(/\{page\.cssLink\}/g, cssLink.map(item => `<link rel="stylesheet" href="${item}">`).join('\n\t'))
-indexTemp = indexTemp.replace(/<\/body>/, s + '\n\t</body>')
+indexTemp = indexTemp.replace(/<\/body>/, s + '\n</body>')
 
 writeFile(`${root}/index.html`, indexTemp)
 

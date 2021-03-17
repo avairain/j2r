@@ -87,13 +87,16 @@
         {
           "type": "View.B",
           "children": ["{s}"]
+        },
+        {
+          "type": "AAAbA.B"
         }
       ]
     }
   },
   "page": {
     "title": "input",
-    "cssLink": ["111.css"],
+    "cssLink": ["111.css", "222.css"],
     "appRoot": "#root",
     "body": [
       {

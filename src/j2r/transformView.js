@@ -31,7 +31,13 @@ views.forEach(v => {
   hasUseCom = Array.from(new Set(hasUseCom))
   let componentStr = componentTemplate.replace(/jsx/, `(${t})`)
   componentStr = componentStr.replace(/'react';/, `'react';
-${hasUseCom.map(v => `import ${v} from '${v === 'View' ? '../' : v}';\n`).join()}`)
+${hasUseCom.map(v => `import ${v} from '${
+  v === 'View'
+  ? '../' 
+  : /[A-Z]/.test(v) 
+    ? v.replace(/([A-Z])/g, '-$1').slice(1).toLocaleLowerCase()
+    : v
+  }';\n`).join('')}`)
   componentStr = componentStr.replace('// componentAction', componentAction.join('\n'))
   usingHooks.forEach(({name, package}) => {
     const reg = new RegExp(package)

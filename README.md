@@ -76,7 +76,13 @@ j2r --config=your.config.json --root=dist
           "color": "red"
         }
       },
-      "children": ["c", "{props.children}"] // <div onClick={(e) => console.log(e)}>{props.children}</div>
+      "children": [
+        "c",
+        "{props.children}",
+        {
+          "type": "AAAA.B" // import OtherLib from 'other-lib' AAA => a-a-a
+        }
+      ] // <div onClick={(e) => console.log(e)}>{props.children}</div>
     }
   },
    "page": {

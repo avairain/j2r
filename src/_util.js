@@ -21,7 +21,11 @@ const writeFile = async (pa, file) => {
   if (/\.js/.test(pa)) {
     f = prettier.format(f)
   }
-  const t = readFile(p)
+  let t = ''
+  try {
+    t = readFile(p)
+  } catch (error) {
+  }
   if (t !== f) {
     console.log('writeFile', p)
     fs.writeFile(p, f, e => {
