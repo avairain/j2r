@@ -17,7 +17,7 @@ views.forEach(v => {
 
 str += `
 
-export default {
+export {
   ${views.join(',\n')}
 }
 `
@@ -31,7 +31,7 @@ views.forEach(v => {
   hasUseCom = Array.from(new Set(hasUseCom))
   let componentStr = componentTemplate.replace(/jsx/, `(${t})`)
   componentStr = componentStr.replace(/'react';/, `'react';
-${hasUseCom.map(v => `import ${v} from '${
+${hasUseCom.map(v => `import ${v === 'View' ? `* as View` : v} from '${
   v === 'View'
   ? '../' 
   : /[A-Z]/.test(v) 

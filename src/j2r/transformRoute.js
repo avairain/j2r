@@ -19,7 +19,7 @@ routeJs = routerTemplate.replace(/jsx/, `(
 
 routeJs = routeJs.replace(/importRoute/, '{ HashRouter, BrowserRouter, Route }')
 routeJs = routeJs.replace(/react-router-dom';/, `react-router-dom';
-import View from './view/index';`)
+import * as View from './view/index';`)
 writeFile(`${root}/Route.js`, routeJs)
 
 
